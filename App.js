@@ -1,20 +1,20 @@
 import {
   StyleSheet,
-  TouchableWithoutFeedback,
-  Text,
   View,
+  Text,
   SafeAreaView,
-  Button,
   Platform,
   StatusBar,
 } from "react-native";
+import {
+  useDimensions,
+  useDeviceOrientation,
+} from "@react-native-community/hooks";
 
 export default function App() {
   return (
     <SafeAreaView style={styles.container}>
-      <Text style={{ fontSize: 35, color: "white", fontWeight: "700" }}>
-        Dubul
-      </Text>
+      <Text>Hello Belgian</Text>
     </SafeAreaView>
   );
 }
@@ -22,7 +22,7 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "navy",
+    backgroundColor: "white",
     padding: Platform.OS === "android" ? StatusBar.currentHeight : 0,
 
     alignItems: "center",
