@@ -1,19 +1,30 @@
-import { StatusBar } from "expo-status-bar";
-import { StyleSheet, Text, View } from "react-native";
+import {
+  StyleSheet,
+  TouchableWithoutFeedback,
+  Text,
+  View,
+  SafeAreaView,
+  Button,
+  Platform,
+  StatusBar,
+} from "react-native";
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Hello Maxwell</Text>
-      <StatusBar style="auto" />
-    </View>
+    <SafeAreaView style={styles.container}>
+      <Text style={{ fontSize: 35, color: "white", fontWeight: "700" }}>
+        Dubul
+      </Text>
+    </SafeAreaView>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#fff",
+    backgroundColor: "navy",
+    padding: Platform.OS === "android" ? StatusBar.currentHeight : 0,
+
     alignItems: "center",
     justifyContent: "center",
   },
