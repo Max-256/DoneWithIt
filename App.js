@@ -1,11 +1,5 @@
-import { View } from "react-native";
-
-import BackgroundImg from "./components/BackgroundImg";
+import { View, Text } from "react-native";
 
 export default function App() {
-  return (
-    <View>
-      <BackgroundImg />
-    </View>
-  );
+  return <View></View>;
 }
