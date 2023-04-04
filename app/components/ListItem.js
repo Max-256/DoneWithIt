@@ -17,11 +17,12 @@ function ListItem({ image, title, subtitle }) {
 const styles = StyleSheet.create({
   detailsContainer: {
     flexDirection: "row",
+    padding: 5,
   },
   image: {
-    width: 70,
-    height: 70,
-    borderRadius: 35,
+    width: 50,
+    height: 50,
+    borderRadius: 25,
     marginRight: 10,
   },
   subtitle: {
