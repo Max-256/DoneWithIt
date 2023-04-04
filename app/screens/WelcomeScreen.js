@@ -1,19 +1,28 @@
 import React from "react";
 import { ImageBackground, StyleSheet, View, Image, Text } from "react-native";
+import AppButton from "../components/AppButton";
+import colors from "../config/colors";
 
 function WelcomeScreen(props) {
   return (
     <ImageBackground
+      blurRadius={10}
       style={styles.background}
       source={require("../assets/background.jpg")}
     >
       <View style={styles.container}>
         <Image style={styles.logo} source={require("../assets/logo-red.png")} />
-        <Text>Sell what you don't Need</Text>
+        <Text style={styles.tagline}>Sell what you don't Need</Text>
       </View>
 
-      <View style={styles.loginButton}></View>
-      <View style={styles.registerButton}></View>
+      <View style={styles.buttonsContainer}>
+        <AppButton title="login" onPress={() => console.log("tapped")} />
+        <AppButton
+          color="secondary"
+          title="register"
+          onPress={() => console.log("tapped")}
+        />
+      </View>
     </ImageBackground>
   );
 }
@@ -23,6 +32,10 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: "flex-end",
     alignItems: "center",
+  },
+  buttonsContainer: {
+    width: "100%",
+    padding: 5,
   },
   container: {
     alignItems: "center",
@@ -34,15 +47,10 @@ const styles = StyleSheet.create({
     height: 70,
     marginTop: 70,
   },
-  loginButton: {
-    width: "100%",
-    height: 70,
-    backgroundColor: "tomato",
-  },
-  registerButton: {
-    width: "100%",
-    height: 70,
-    backgroundColor: "lightblue",
+  tagline: {
+    fontSize: 20,
+    fontWeight: "bold",
+    paddingVertical: 10,
   },
 });
 
