@@ -26,6 +26,9 @@ const messages = [
 ];
 
 function MessagesScreen(props) {
+  const handlePress = () => {
+    console.log();
+  };
   return (
     <Screen>
       <FlatList
@@ -36,6 +39,7 @@ function MessagesScreen(props) {
             title={item.title}
             subtitle={item.description}
             image={item.image}
+            onPress={handlePress}
           />
         )}
         ItemSeparatorComponent={ListItemSeperator}
